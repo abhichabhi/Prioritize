@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.call.handle"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.call.handle.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+        <receiver android:name="CallHandler">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                
+            </intent-filter>
+        </receiver>
+        -->
+        <activity
+            android:name="com.example.call.handle.Lists"
+            android:label="@string/title_activity_lists" >
+        </activity>
+        <activity
+            android:name="com.example.call.handle.ShowList"
+            android:label="@string/title_activity_show_list" >
+        </activity>
+        <activity
+            android:name="com.example.call.handle.AddList"
+            android:label="@string/title_activity_add_list" >
+        </activity>
+        <activity
+            android:name="com.example.call.handle.DeleteList"
+            android:label="@string/title_activity_delete_list" >
+        </activity>
+    </application>
+
+</manifest>
